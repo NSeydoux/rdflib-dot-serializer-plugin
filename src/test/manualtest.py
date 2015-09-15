@@ -4,13 +4,8 @@ import sys
 
 __author__ = 'nhc'
 
-_EXAMPLE = '''#Processed by Id: cwm.py,v 1.29 2001/02/28 20:45:26 timbl Exp
-        #    using base file:/afs/w3.org/pub/WWW/2000/10/swap/test/meet/
-
-#  Notation3 generation by
-#       notation3.py,v 1.54 2001/02/12 18:38:31 timbl Exp
-
-#   Base was: file:/afs/w3.org/pub/WWW/2000/10/swap/test/meet/
+_EXAMPLE = '''#Modification of http://www.w3.org/2000/10/swap/test/meet/white.n3
+     @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
      @prefix g: <http://www.another.example.org/geographical#> .
      @prefix : <http://www.example.org/meeting_organization#> .
      @prefix p: <http://www.example.org/personal_details#> .
@@ -26,9 +21,8 @@ _EXAMPLE = '''#Processed by Id: cwm.py,v 1.29 2001/02/28 20:45:26 timbl Exp
 
     <http://www.example.org/people#fred>     :attending <http://meetings.example.com/cal#m1>;
          p:GivenName "Fred";
-         p:hasEmail <mailto:fred@example.com> .
-
- #ENDS
+         p:hasEmail <mailto:fred@example.com> ;
+         rdfs:label "Freddy".
 '''
 
 
