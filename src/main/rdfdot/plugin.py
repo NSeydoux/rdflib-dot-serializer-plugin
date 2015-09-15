@@ -1,6 +1,12 @@
 import rdflib
 __author__ = 'nhc'
 
+_DUMMY_DOT_FILE = '''digraph MyGraph {
+     a -> b -> c;
+     b -> d;
+ }
+'''
+
 
 class DotSerializer(rdflib.Serializer):
     def serialize(self, stream, base=None, encoding=None, **args):
@@ -12,4 +18,4 @@ class DotSerializer(rdflib.Serializer):
         :param args: Ignored.
         :return: None.
         """
-        pass
+        stream.write(_DUMMY_DOT_FILE)
